@@ -32,18 +32,13 @@ namespace JoJosMod.Projectiles
 
         public override void AI()
         {
-            Projectile.rotation = isRightSwing ? -1.2f : -1.9f; //-1.9
+            Projectile.rotation = isRightSwing ? -1.2f : -1.9f;
             Projectile.velocity = new(0,0);
 
             Projectile.scale = thisPlayer.GetAdjustedItemScale(thisPlayer.HeldItem) + 0.2f;
 
-            Projectile.position = new(thisPlayer.Center.X - (isRightSwing ? 40 : 90), thisPlayer.Center.Y - (Projectile.height / 1.3f)); //90
+            Projectile.position = new(thisPlayer.Center.X - (isRightSwing ? 40 : 90), thisPlayer.Center.Y - (Projectile.height / 1.3f));
            
-        }
-
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        {
-            SoundEngine.PlaySound(SoundID.FemaleHit, thisPlayer.position);
         }
 
     }
