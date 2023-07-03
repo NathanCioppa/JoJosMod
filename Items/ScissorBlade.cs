@@ -19,8 +19,8 @@ namespace JoJosMod.Items
             Item.width = 116; Item.height = 116;
             Item.damage = 70;
             Item.DamageType = DamageClass.Melee;
-            Item.useTime = 8;
-            Item.useAnimation = 16;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
             Item.knockBack = 5;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.autoReuse = true;
