@@ -1,8 +1,10 @@
-﻿using System.Numerics;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using JoJosMod.Projectiles;
+using Terraria.DataStructures;
+using System.Collections.Generic;
 
 namespace JoJosMod.Items
 {
@@ -16,15 +18,16 @@ namespace JoJosMod.Items
 
         public override void SetDefaults()
         {
-            Item.width = 116; Item.height = 116;
+            Item.width = 116; Item.height = 118;
             Item.damage = 70;
             Item.DamageType = DamageClass.Melee;
             Item.useTime = 15;
             Item.useAnimation = 15;
-            Item.knockBack = 5;
+            Item.knockBack = 4;
+            Item.noUseGraphic = true;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.autoReuse = true;
-            Item.shoot = ModContent.ProjectileType<ScissorBladeProjectile>();
+            Item.shoot = ModContent.ProjectileType<Projectiles.ScissorBlade>();
             Item.shootSpeed = 1;
             Item.scale = 1;
             Item.ArmorPenetration = 25;
