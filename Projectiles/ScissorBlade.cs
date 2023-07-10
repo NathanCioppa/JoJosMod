@@ -18,18 +18,20 @@ namespace JoJosMod.Projectiles
             Main.projFrames[Projectile.type] = MaxAnimationFrames;
         }
 
+        float baseRotation;
         public override void SetDefaults()
         {
+            baseRotation = -swingDirection * 1.9f;
             Projectile.width = 116; Projectile.height = 118;
             Projectile.DamageType = DamageClass.Melee;
-            Projectile.timeLeft = Items.ScissorBlade.UseTime;
+            Projectile.timeLeft = (int)(Items.ScissorBlade.UseTime / thisPlayer.GetTotalAttackSpeed<MeleeDamageClass>());
             Projectile.penetrate = 100;
             Projectile.tileCollide = false;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.ignoreWater = true;
             Projectile.spriteDirection = swingDirection;
-            Projectile.rotation = -swingDirection * 2;
+            Projectile.rotation = baseRotation;
         }
 
         readonly Player thisPlayer = Main.player[Main.myPlayer];
@@ -37,9 +39,9 @@ namespace JoJosMod.Projectiles
         // 1 for right, -1 for left
         public int swingDirection = Main.MouseWorld.X >= Main.player[Main.myPlayer].Center.X ? 1 : -1;
 
-
         public override void AI()
         {
+            Projectile.ai[0]++;
             Projectile.frameCounter++;
 
             if (Projectile.frameCounter % Math.Floor((decimal)Items.ScissorBlade.UseTime / MaxAnimationFrames) == 0 && Projectile.frame < MaxAnimationFrames - 1)
@@ -49,7 +51,12 @@ namespace JoJosMod.Projectiles
             Projectile.damage = 0;
             Projectile.knockBack = 0;
 
-            if (Projectile.ai[0] > 0)Projectile.rotation += (MathHelper.Pi / (Items.ScissorBlade.UseTime - 1)) * swingDirection;
+            if (Projectile.ai[0] > 1)
+                Projectile.rotation += (MathHelper.Pi / (int)((Items.ScissorBlade.UseTime - 1) / thisPlayer.GetTotalAttackSpeed<MeleeDamageClass>())) * swingDirection;
+            
+            if(Projectile.ai[0] == (int)(Items.ScissorBlade.UseTime / thisPlayer.GetTotalAttackSpeed<MeleeDamageClass>())-1)
+                Projectile.rotation = baseRotation + ((MathHelper.Pi - 0.25f) * swingDirection);
+
             Projectile.velocity = new(0,0);
 
             Projectile.scale = thisPlayer.GetAdjustedItemScale(thisPlayer.HeldItem);
@@ -59,7 +66,7 @@ namespace JoJosMod.Projectiles
             DrawOriginOffsetX = (Projectile.width / 2) * -swingDirection;
             DrawOriginOffsetY = -Projectile.height / 2;
             
-            Projectile.ai[0]++;
+            
 
         }
 
