@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using JoJosMod.Projectiles;
 using Terraria.DataStructures;
+using JoJosMod.Dusts;
 
 namespace JoJosMod.Items
 {
@@ -50,6 +51,14 @@ namespace JoJosMod.Items
             recipe.AddIngredient(ItemID.BrokenHeroSword,1);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+        }
+
+        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+        {
+            Vector2 spawnPosition = new( (target.position.X - (WhiteStar.whiteStarWidthHeight/2)), (target.position.Y - (WhiteStar.whiteStarWidthHeight/2)) );
+            
+
+            Dust.NewDust(spawnPosition, target.width, target.height, ModContent.DustType<WhiteStar>(), Scale: 1.5f);
         }
     }
 }
