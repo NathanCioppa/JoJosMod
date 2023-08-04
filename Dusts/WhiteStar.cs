@@ -1,13 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using JoJosMod.Projectiles;
-using Terraria.DataStructures;
-using System.Reflection.Metadata;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace JoJosMod.Dusts
 {

@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -7,11 +6,6 @@ namespace JoJosMod.Items
 {
     public class SayoriChibi : ModItem
     {
-        public override void SetStaticDefaults() 
-        {
-            DisplayName.SetDefault("Cute Chibi");
-            Tooltip.SetDefault("It's a Jah poem!");
-        }
 
         public override void SetDefaults()
         {

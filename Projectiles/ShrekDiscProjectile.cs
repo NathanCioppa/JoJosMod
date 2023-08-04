@@ -8,10 +8,6 @@ namespace JoJosMod.Projectiles
 {
     internal class ShrekDiscProjectile : ModProjectile
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Cinematic Masterpiece");
-        }
 
         public override void SetDefaults()
         {
@@ -31,6 +27,7 @@ namespace JoJosMod.Projectiles
         const float TurnAroundStateLengthSeconds = 0.2f;
         float playerAttackSpeed = Main.player[Main.myPlayer].GetAttackSpeed<MeleeDamageClass>();
         int spin = 1;
+        bool movingToPlayer = false;
         
 
         public override void AI()
@@ -38,14 +35,18 @@ namespace JoJosMod.Projectiles
             Projectile.ai[0] += 1f;
             float secondsSinceThrow = Projectile.ai[0] / 60f;
 
+            int sideOfPlayer = Main.player[Main.myPlayer].position.X <= Projectile.position.X ? 1 : -1;
+            movingToPlayer = (Projectile.oldPosition.X * sideOfPlayer > Projectile.position.X * sideOfPlayer);
+
             if (!isReturning)
             {
                 isReturning = secondsSinceThrow >= SecondsBeforeReturning;
-                if (isReturning) shouldTurnAround = true;
-
+                shouldTurnAround = isReturning && !movingToPlayer;
+                
                 spin = Projectile.direction;
                 Projectile.damage += (int)(Projectile.damage * 0.03f);
             }
+
             Projectile.rotation += 0.3f * spin;
 
             if (isReturning)
@@ -111,7 +112,7 @@ namespace JoJosMod.Projectiles
             return false;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Projectile.penetrate++;
             isReturning = true;

@@ -10,10 +10,6 @@ namespace JoJosMod.Projectiles
 {
     internal class WintonProjectile : ModProjectile
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Winton");
-        }
 
         public override void SetDefaults()
         {

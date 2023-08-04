@@ -8,11 +8,6 @@ namespace JoJosMod.Items
 {
     internal class ShrekDisc : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Cinematic Masterpiece");
-            Tooltip.SetDefault("Deals more damage the longer it stays in the air\n\"Do the roar.\"");
-        }
 
         public static float throwVelocity = 17.5f;
 

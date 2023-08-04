@@ -7,11 +7,6 @@ namespace JoJosMod.Items
 {
     public class ThrowingSayoriChibi : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Strange Poem");
-            Tooltip.SetDefault("\"GET OUT OF MY HEAD\"");
-        }
 
         public override void SetDefaults()
         {

@@ -10,11 +10,6 @@ namespace JoJosMod.Items
 {
     internal class WintonOverwat : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Winton Overwat");
-            Tooltip.SetDefault("Winton.");
-        }
 
         public override void SetDefaults()
         {

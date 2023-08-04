@@ -10,11 +10,6 @@ namespace JoJosMod.Items
 {
     internal class ScissorBlade : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Scissor Blade");
-            Tooltip.SetDefault("Ignores 25 points of enemy defense \n\"Swiss cheese!\"");
-        }
 
         public static int UseTime = 15; 
 
@@ -53,7 +48,7 @@ namespace JoJosMod.Items
             recipe.Register();
         }
 
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+        public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Vector2 spawnPosition = new( (target.position.X - (WhiteStar.whiteStarWidthHeight/2)), (target.position.Y - (WhiteStar.whiteStarWidthHeight/2)) );
             

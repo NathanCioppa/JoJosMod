@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,8 +10,6 @@ namespace JoJosMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Little Lighter");
-            Tooltip.SetDefault("Places unlimited lanterns to light up your life\n\"Not all lights can be trusted, but these should be quite safe!\"");
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(10, 2));
         }
 

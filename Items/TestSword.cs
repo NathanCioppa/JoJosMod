@@ -6,11 +6,6 @@ namespace JoJosMod.Items
 {
 	public class TestSword : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.SetDefault("Bruh");
-			Tooltip.SetDefault("DEEZ NUTS!!!!");
-		}
 
 		public override void SetDefaults()
 		{

@@ -1,0 +1,65 @@
+Mods: {
+	JoJosMod: {
+		Items: {
+			LittleRainHood: {
+				DisplayName: Little Rain Hood
+				Tooltip: '''"Little lost things sometimes find their way home."'''
+			}
+
+			LittleLighter: {
+				DisplayName: Little Lighter
+				Tooltip:
+					'''
+					Places unlimited lanterns to light up your life
+					"Not all lights can be trusted, but these should be quite safe!"
+					'''
+			}
+
+			SayoriChibi: {
+				DisplayName: Cute Chibi
+				Tooltip: It's a Jah poem!
+			}
+
+			ScissorBlade: {
+				DisplayName: Scissor Blade
+				Tooltip:
+					'''
+					Ignores 25 points of enemy defense 
+					"Swiss cheese!"
+					'''
+			}
+
+			ShrekDisc: {
+				DisplayName: Cinematic Masterpiece
+				Tooltip:
+					'''
+					Deals more damage the longer it stays in the air
+					"Do the roar."
+					'''
+			}
+
+			TestSword: {
+				DisplayName: Bruh
+				Tooltip: DEEZ NUTS!!!!
+			}
+
+			ThrowingSayoriChibi: {
+				DisplayName: Strange Poem
+				Tooltip: '''"GET OUT OF MY HEAD"'''
+			}
+
+			WintonOverwat: {
+				DisplayName: Winton Overwat
+				Tooltip: Winton.
+			}
+		}
+
+		Projectiles: {
+			SayoriProjectile.DisplayName: Suicidal Bitch
+			ScissorBlade.DisplayName: Scissor Blade
+			ScissorBladeProjectile.DisplayName: Scissor Blade
+			ShrekDiscProjectile.DisplayName: Cinematic Masterpiece
+			WintonProjectile.DisplayName: Winton
+		}
+	}
+}

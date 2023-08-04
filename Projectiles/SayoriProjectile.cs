@@ -8,10 +8,6 @@ namespace JoJosMod.Projectiles
 {
     public class SayoriProjectile : ModProjectile
     {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Suicidal Bitch");
-        }
 
         public override void SetDefaults()
         {

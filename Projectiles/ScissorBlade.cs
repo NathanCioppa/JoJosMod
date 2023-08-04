@@ -14,7 +14,6 @@ namespace JoJosMod.Projectiles
         const int MaxAnimationFrames = 5;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Scissor Blade");
             Main.projFrames[Projectile.type] = MaxAnimationFrames;
         }
 
