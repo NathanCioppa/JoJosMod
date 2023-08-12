@@ -24,7 +24,7 @@ Mods: {
 				DisplayName: Scissor Blade
 				Tooltip:
 					'''
-					Ignores 25 points of enemy defense 
+					Ignores 50 points of enemy defense 
 					"Swiss cheese!"
 					'''
 			}

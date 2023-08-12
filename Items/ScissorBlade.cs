@@ -16,7 +16,7 @@ namespace JoJosMod.Items
         public override void SetDefaults()
         {
             Item.width = 116; Item.height = 118;
-            Item.damage = 190;
+            Item.damage = 140;
             Item.DamageType = DamageClass.Melee;
             Item.useTime = UseTime;
             Item.useAnimation = UseTime;
@@ -27,7 +27,7 @@ namespace JoJosMod.Items
             Item.shoot = ModContent.ProjectileType<Projectiles.ScissorBlade>();
             Item.shootSpeed = 1;
             Item.scale = 1;
-            Item.ArmorPenetration = 25;
+            Item.ArmorPenetration = 50;
             Item.rare = ItemRarityID.Yellow;
             Item.crit = 30;
         }
