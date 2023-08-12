@@ -2,7 +2,6 @@
 using Terraria;
 using Terraria.ModLoader;
 using JoJosMod.Items;
-using Terraria.DataStructures;
 
 namespace JoJosMod.Projectiles
 {
@@ -27,11 +26,15 @@ namespace JoJosMod.Projectiles
         const float TurnAroundStateLengthSeconds = 0.2f;
         float playerAttackSpeed = Main.player[Main.myPlayer].GetAttackSpeed<MeleeDamageClass>();
         int spin = 1;
+        
+        float? scaledDamage = null;
         bool movingToPlayer = false;
         
 
         public override void AI()
         {
+            scaledDamage ??= Projectile.damage;
+
             Projectile.ai[0] += 1f;
             float secondsSinceThrow = Projectile.ai[0] / 60f;
 
@@ -44,7 +47,10 @@ namespace JoJosMod.Projectiles
                 shouldTurnAround = isReturning && !movingToPlayer;
                 
                 spin = Projectile.direction;
-                Projectile.damage += (int)(Projectile.damage * 0.03f);
+
+                scaledDamage *= 1.03f;
+                Projectile.damage = (int)scaledDamage;
+                
             }
 
             Projectile.rotation += 0.3f * spin;
@@ -79,8 +85,10 @@ namespace JoJosMod.Projectiles
                 Vector2 velocity = new(newVelocityX, distanceFromDestinationY * speed);
 
                 Projectile.velocity =  velocity;
-
-                Projectile.damage += (int)(Projectile.damage * 0.01f);
+                
+                scaledDamage *= 1.01f;
+                Projectile.damage = (int)scaledDamage;
+                
             }
         }
 
