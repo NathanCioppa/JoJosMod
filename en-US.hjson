@@ -52,6 +52,16 @@ Mods: {
 				DisplayName: Winton Overwat
 				Tooltip: Winton.
 			}
+
+			TallHat: {
+				Tooltip: ""
+				DisplayName: Tall Hat
+			}
+
+			SymphonyHat: {
+				Tooltip: ""
+				DisplayName: Symphony Hat
+			}
 		}
 
 		Projectiles: {
