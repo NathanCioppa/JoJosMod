@@ -6,6 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ModLoader;
 using ReLogic.Content;
 using JoJosMod.Players;
+using System.Linq;
 
 namespace JoJosMod.Armor
 {
@@ -27,8 +28,13 @@ namespace JoJosMod.Armor
             if (drawInfo.drawPlayer.DeadOrGhost) return;
 
             hatTexture ??= ModContent.Request<Texture2D>("JoJosMod/Armor/SymphonyHat");
+            
+            const int FrameHeight = 56;
+            int[] highFrames = new int[] {7,8,9,14,15,16};
+            int playerFrameY = Main.player[Main.myPlayer].legFrame.Y;
+                        
 
-            var position = drawInfo.Center + new Vector2(drawInfo.drawPlayer.direction > 0 ? -18 : -12, -47) - Main.screenPosition;
+            var position = drawInfo.Center + new Vector2(drawInfo.drawPlayer.direction > 0 ? -18 : -12, highFrames.Contains(playerFrameY/FrameHeight) ? -49 : -47) - Main.screenPosition;
             position = new Vector2((int)position.X, (int)position.Y);
 
             DrawData drawData = new(

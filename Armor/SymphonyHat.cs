@@ -18,7 +18,6 @@ namespace JoJosMod.Armor
         public override void SetStaticDefaults()
         {
             ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true;
-            
         }
 
         public override bool IsVanitySet(int head, int body, int legs)
