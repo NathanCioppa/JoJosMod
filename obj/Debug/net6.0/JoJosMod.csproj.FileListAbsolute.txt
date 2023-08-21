@@ -1,0 +1,5 @@
+C:\Users\nacio\OneDrive\Documents\My Games\Terraria\tModLoader\ModSources\JoJosMod\obj\Debug\net6.0\JoJosMod.csproj.AssemblyReference.cache
+C:\Users\nacio\OneDrive\Documents\My Games\Terraria\tModLoader\ModSources\JoJosMod\obj\Debug\net6.0\JoJosMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nacio\OneDrive\Documents\My Games\Terraria\tModLoader\ModSources\JoJosMod\obj\Debug\net6.0\JoJosMod.AssemblyInfoInputs.cache
+C:\Users\nacio\OneDrive\Documents\My Games\Terraria\tModLoader\ModSources\JoJosMod\obj\Debug\net6.0\JoJosMod.AssemblyInfo.cs
+C:\Users\nacio\OneDrive\Documents\My Games\Terraria\tModLoader\ModSources\JoJosMod\obj\Debug\net6.0\JoJosMod.csproj.CoreCompileInputs.cache
