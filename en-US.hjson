@@ -53,13 +53,8 @@ Mods: {
 				Tooltip: Winton.
 			}
 
-			TallHat: {
-				Tooltip: ""
-				DisplayName: Tall Hat
-			}
-
 			SymphonyHat: {
-				Tooltip: ""
+				Tooltip: '''"The sky is my world... You stinking bitch!"'''
 				DisplayName: Symphony Hat
 			}
 		}

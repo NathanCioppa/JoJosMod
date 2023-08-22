@@ -13,6 +13,8 @@ namespace JoJosMod.Armor
         {
             Item.width = 30; Item.height = 46;
             Item.vanity = true;
+            Item.rare = ItemRarityID.Pink;
+            Item.value = 500;
         }
 
         public override void SetStaticDefaults()
@@ -28,6 +30,17 @@ namespace JoJosMod.Armor
         public override void PreUpdateVanitySet(Player player)
         {
             player.GetModPlayer<SymphonyHatPlayer>().isWearingShmphonyHat = true;
+        }
+
+        public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.RedString, 1);
+            recipe.AddIngredient(ItemID.PinkThread, 5);
+            recipe.AddIngredient(ItemID.Silk, 12);
+            recipe.AddTile(TileID.Loom);
+
+            recipe.Register();
         }
     }
 }

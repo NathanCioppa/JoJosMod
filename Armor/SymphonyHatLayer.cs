@@ -7,8 +7,6 @@ using Terraria.ModLoader;
 using ReLogic.Content;
 using JoJosMod.Players;
 using System.Linq;
-using Terraria.Initializers;
-using Terraria.Graphics.Shaders;
 
 namespace JoJosMod.Armor
 {
