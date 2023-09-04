@@ -5,8 +5,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using ReLogic.Content;
-using JoJosMod.Players;
 using System.Linq;
+using JoJosMod.Players;
 
 namespace JoJosMod.Armor
 {
@@ -21,25 +21,30 @@ namespace JoJosMod.Armor
         }
 
         public override Position GetDefaultPosition() => new AfterParent(PlayerDrawLayers.Head);
-        
 
         protected override void Draw(ref PlayerDrawSet drawInfo)
         {
-            if (drawInfo.drawPlayer.DeadOrGhost) return;
+            Player player = drawInfo.drawPlayer;
+
+            if (player.DeadOrGhost) return;
 
             hatTexture ??= ModContent.Request<Texture2D>("JoJosMod/Armor/SymphonyHat");
-            int dyeShader = drawInfo.drawPlayer.dye?[0].dye ?? 0;
 
-            const int FrameHeight = 56;
             int[] highFrames = new int[] {7,8,9,14,15,16};
-            int playerFrameY = Main.player[Main.myPlayer].bodyFrame.Y;
+            int bodyFrameHeight = player.bodyFrame.Height;
+            int playerBodyFrameY = player.bodyFrame.Y;
+            int playerBodyFrame = playerBodyFrameY / bodyFrameHeight;
+            bool isHighFrame = highFrames.Contains(playerBodyFrame);
 
-            
+            int drawOffsetY = -26;
+            if (isHighFrame) drawOffsetY -= 2;
+            int drawOffsetX = player.direction < 0 ? -4:-6;
 
-            var position = drawInfo.Center + new Vector2(drawInfo.drawPlayer.direction > 0 ? -18 : -12, highFrames.Contains(playerFrameY/FrameHeight) ? -49 : -47) - Main.screenPosition;
+            var position = drawInfo.Position + new Vector2(drawOffsetX,drawOffsetY) - Main.screenPosition;
             position = new Vector2((int)position.X, (int)position.Y);
 
-            DrawData drawData = new(
+            DrawData drawData = new
+            (
                 hatTexture.Value,
                 position,
                 null,
@@ -47,9 +52,12 @@ namespace JoJosMod.Armor
                 0,
                 drawInfo.rotationOrigin,
                 1f,
-                drawInfo.drawPlayer.direction > 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally);
+                player.direction < 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None
+            );
 
+            int dyeShader = player.dye?[0].dye ?? 0;
             drawData.shader = dyeShader;
+
             drawInfo.DrawDataCache.Add(drawData);
         }
     }

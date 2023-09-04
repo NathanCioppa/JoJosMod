@@ -1,5 +1,4 @@
-﻿
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using JoJosMod.Players;
@@ -7,6 +6,7 @@ using JoJosMod.Players;
 namespace JoJosMod.Armor
 {
     [AutoloadEquip(EquipType.Head)]
+
     internal class SymphonyHat : ModItem
     {
         public override void SetDefaults()
@@ -27,7 +27,7 @@ namespace JoJosMod.Armor
             return true;
         }
 
-        public override void PreUpdateVanitySet(Player player)
+        public override void UpdateVanitySet(Player player)
         {
             player.GetModPlayer<SymphonyHatPlayer>().isWearingShmphonyHat = true;
         }

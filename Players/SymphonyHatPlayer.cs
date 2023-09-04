@@ -1,9 +1,8 @@
-﻿
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
 
 namespace JoJosMod.Players
 {
-    internal class SymphonyHatPlayer:ModPlayer
+    internal class SymphonyHatPlayer : ModPlayer
     {
         public bool isWearingShmphonyHat;
 
