@@ -30,7 +30,7 @@ namespace JoJosMod.Items
 			recipe.AddIngredient(ItemID.DirtBlock, 10);
             recipe.AddIngredient(ItemID.Wood, 3);
             recipe.AddTile(TileID.WorkBenches);
-			recipe.Register();
+			//recipe.Register();
 		}
 	}
 }

@@ -57,6 +57,17 @@ Mods: {
 				Tooltip: '''"The sky is my world... You stinking bitch!"'''
 				DisplayName: Symphony Hat
 			}
+
+			ExplosionStaff: {
+				DisplayName: Crimson Staff
+				Tooltip:
+					'''
+					Conjures a large explosion at your cursor's position
+					Inflicts cursed flames, broken armor, and miasma on enemies caught in the blast
+					Intense heat burns all nearby enemies
+					"EXPLOOOOOOSION"
+					'''
+			}
 		}
 
 		Projectiles: {
@@ -65,6 +76,15 @@ Mods: {
 			ScissorBladeProjectile.DisplayName: Scissor Blade
 			ShrekDiscProjectile.DisplayName: Cinematic Masterpiece
 			WintonProjectile.DisplayName: Winton
+			ExplosionStaffProjectile.DisplayName: Explosion Staff Projectile
+			ExplosionStaffShockwave.DisplayName: Explosion Staff Shockwave
+		}
+
+		Buffs: {
+			ExplosionMagicDebuff: {
+				DisplayName: Explosion Magic Exhausted
+				Description: You must wait to use the Crimson Staff
+			}
 		}
 	}
 }
