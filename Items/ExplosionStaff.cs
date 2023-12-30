@@ -17,6 +17,7 @@ namespace JoJosMod.Items
             Item.width = 76;
             Item.height = 88;
             Item.damage = 200;
+            Item.knockBack = 20;
             Item.DamageType = DamageClass.Magic;
             Item.mana = 100;
             Item.holdStyle = ItemHoldStyleID.HoldGuitar;
@@ -125,6 +126,28 @@ namespace JoJosMod.Items
         {
             Dust.NewDustPerfect(new(blastCenter.X, blastCenter.Y + spawnOffsetY), DustID.SolarFlare, Velocity: velocity, Scale: 2f).noGravity = true;
             Dust.NewDustPerfect(new(blastCenter.X, blastCenter.Y + spawnOffsetY), DustID.SolarFlare, Velocity: -velocity, Scale: 2f).noGravity = true;
+        }
+
+
+        public override void AddRecipes()
+        {
+            Recipe recipeCrimsion = CreateRecipe();
+            recipeCrimsion.AddIngredient(ItemID.GoldenShower, 1);
+            recipeCrimsion.AddIngredient(ItemID.SunStone, 1);
+            recipeCrimsion.AddIngredient(ItemID.InfernoFork,1);
+            recipeCrimsion.AddIngredient(ItemID.ApprenticeStaffT3, 1);
+
+            Recipe recipieCorruption = CreateRecipe();
+            recipieCorruption.AddIngredient(ItemID.CursedFlames, 1);
+            recipieCorruption.AddIngredient(ItemID.SunStone, 1);
+            recipieCorruption.AddIngredient(ItemID.InfernoFork, 1);
+            recipieCorruption.AddIngredient(ItemID.ApprenticeStaffT3, 1);
+
+            recipeCrimsion.AddTile(TileID.MythrilAnvil);
+            recipieCorruption.AddTile(TileID.MythrilAnvil);
+
+            recipeCrimsion.Register();
+            recipieCorruption.Register();
         }
     }
 }
