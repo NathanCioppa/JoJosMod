@@ -31,6 +31,7 @@ namespace JoJosMod.Projectiles;
         Projectile.ignoreWater = true;
         Projectile.spriteDirection = swingDirection;
         Projectile.rotation = BaseRotation * -swingDirection;
+       
     }
 
     readonly Player thisPlayer = Main.player[Main.myPlayer];

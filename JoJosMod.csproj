@@ -14,7 +14,9 @@
     <None Remove="Armor\SymphonyHat.png" />
     <None Remove="Armor\SymphonyHat_Head.png" />
     <None Remove="Buffs\ExplosionMagicDebuff.png" />
+    <None Remove="Items\CrystalStaff.png" />
     <None Remove="Items\ExplosionStaff.png" />
+    <None Remove="Projectiles\CrystalStaffProjectile.png" />
     <None Remove="Projectiles\ExplosionStaffProjectile.png" />
     <None Remove="Projectiles\using JoJosMod.Items;.png" />
   </ItemGroup>

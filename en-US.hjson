@@ -68,6 +68,11 @@ Mods: {
 					"EXPLOOOOOOSION"
 					'''
 			}
+
+			CrystalStaff: {
+				DisplayName: Crystal Staff
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -78,6 +83,7 @@ Mods: {
 			WintonProjectile.DisplayName: Winton
 			ExplosionStaffProjectile.DisplayName: Explosion Staff Projectile
 			ExplosionStaffShockwave.DisplayName: Explosion Staff Shockwave
+			CrystalStaffProjectile.DisplayName: Crystal Staff Projectile
 		}
 
 		Buffs: {
