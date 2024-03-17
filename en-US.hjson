@@ -73,6 +73,11 @@ Mods: {
 				DisplayName: Crystal Staff
 				Tooltip: ""
 			}
+
+			PhantomTax: {
+				DisplayName: Phantom Tax
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -84,6 +89,7 @@ Mods: {
 			ExplosionStaffProjectile.DisplayName: Explosion Staff Projectile
 			ExplosionStaffShockwave.DisplayName: Explosion Staff Shockwave
 			CrystalStaffProjectile.DisplayName: Crystal Staff Projectile
+			PhantomSkull.DisplayName: Phantom Skull
 		}
 
 		Buffs: {

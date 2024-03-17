@@ -16,8 +16,10 @@
     <None Remove="Buffs\ExplosionMagicDebuff.png" />
     <None Remove="Items\CrystalStaff.png" />
     <None Remove="Items\ExplosionStaff.png" />
+    <None Remove="Items\PhantomTax.png" />
     <None Remove="Projectiles\CrystalStaffProjectile.png" />
     <None Remove="Projectiles\ExplosionStaffProjectile.png" />
+    <None Remove="Projectiles\PhantomSkull.png" />
     <None Remove="Projectiles\using JoJosMod.Items;.png" />
   </ItemGroup>
   <ItemGroup>
