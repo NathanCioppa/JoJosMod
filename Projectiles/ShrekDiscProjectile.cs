@@ -126,7 +126,7 @@ namespace JoJosMod.Projectiles
             isReturning = true;
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             ShrekDisc.playersUsingProjectile.Remove(Projectile.owner);
         }

@@ -48,7 +48,7 @@ namespace JoJosMod.Projectiles
             return base.CanHitNPC(target);
         }
 
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             WintonOverwat.playersUsingProjectile.Remove(Projectile.owner);
         }
