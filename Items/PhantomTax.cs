@@ -16,19 +16,27 @@ namespace JoJosMod.Items
         // Ex: shootSpeed of 8 and VelocityRandomnessFactor of 0.25 means the X and Y velocitys will have between -2 and 2 added before being shot.
         const float VelocityRandomnessFactor = 0.25f;
 
-        private static readonly Random random = new Random();
+        private static readonly Random random = new();
 
         public override void SetDefaults()
         {
+            Item.width = 20; Item.height = 30;
+            Item.rare = ItemRarityID.Red;
+            Item.value = Item.sellPrice(gold: 10);
+            
+            Item.damage = 50;
+            Item.DamageType = DamageClass.Magic;
+            Item.mana = 8;
+            Item.autoReuse = true;
+            
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.shoot = ModContent.ProjectileType<PhantomSkull>();
-            Item.shootSpeed = 10;
             Item.useTime = 10;
             Item.useAnimation = 10;
-            Item.DamageType = DamageClass.Magic;
-            Item.damage = 50;
-            Item.autoReuse = true;
+            
+            Item.shoot = ModContent.ProjectileType<PhantomSkull>();
+            Item.shootSpeed = 15;
         }
+
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             float randomnessRange = VelocityRandomnessFactor * Item.shootSpeed;
@@ -36,7 +44,7 @@ namespace JoJosMod.Items
             velocity += new Vector2(
                 ((float) random.NextDouble() * (randomnessRange * 2)) - randomnessRange,
                 ((float) random.NextDouble() * (randomnessRange * 2)) - randomnessRange
-                );
+            );
 
         }
     }

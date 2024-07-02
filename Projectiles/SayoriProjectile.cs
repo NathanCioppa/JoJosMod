@@ -66,7 +66,8 @@ namespace JoJosMod.Projectiles
             {
                 if(Projectile.velocity.X != oldVelocity.X) Projectile.velocity.X = -oldVelocity.X;
                 if(Projectile.velocity.Y != oldVelocity.Y) Projectile.velocity.Y = -oldVelocity.Y;
-            } else
+            } 
+            else
             {
                 Projectile.Kill();
             }

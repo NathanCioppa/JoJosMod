@@ -2,9 +2,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using JoJosMod.Helpers;
 using System;
-using Terraria.DataStructures;
 
 namespace JoJosMod.Projectiles
 {
@@ -24,6 +22,7 @@ namespace JoJosMod.Projectiles
             Projectile.hostile = false;
             Projectile.frame = 0;
             Projectile.damage = 50;
+            Projectile.DamageType = DamageClass.Magic;
             Projectile.light = 0.75f;
         }
 
@@ -38,7 +37,6 @@ namespace JoJosMod.Projectiles
 
             Projectile.ai[0] += 1f;
 
-
             // Logic for homing in on the nearest enemy in range
             int closestEnemyIndex = Projectile.FindTargetWithLineOfSight(maxRange: homingRange);
             if(closestEnemyIndex != -1) Projectile.velocity = 
@@ -47,13 +45,29 @@ namespace JoJosMod.Projectiles
                     Projectile.DirectionTo(Main.npc[closestEnemyIndex].Center) * speed, 
                     homingTurnRadius
                 );
-                
+
+            Dust.NewDustDirect(
+                Projectile.position,
+                Projectile.width,
+                Projectile.height,
+                DustID.UltraBrightTorch
+            );
+
             IncrementAnimationFrame(Projectile, 5, MaxAnimationFrames);
 
             // Correct the sprite's rotation 
             Projectile.rotation = Projectile.velocity.ToRotation();
             if (Projectile.direction < 0) Projectile.rotation += MathHelper.Pi;
             Projectile.spriteDirection = -Projectile.direction; // negative cuz i drew it the wrong direction :3
+        }
+        
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            Player owner = Main.player[Projectile.owner];
+            // Prevent healing from target dummy, critters, and if affected by moonlord leech
+            if (target.type == NPCID.TargetDummy || target.lifeMax <= 5 || owner.HasBuff(BuffID.MoonLeech)) return;
+
+            owner.Heal(3);
         }
 
         public static void IncrementAnimationFrame(Projectile projectile, int interval, int maxAnimationFrames)

@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|solutionrelative:projectiles\\phantomskull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\tiles\\lantern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|solutionrelative:tiles\\lantern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\items\\phantomtax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|solutionrelative:items\\phantomtax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\projectiles\\sayoriprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|solutionrelative:projectiles\\sayoriprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\projectiles\\crystalstaffprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\items\\phantomtax.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|solutionrelative:items\\phantomtax.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\tiles\\lantern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|solutionrelative:tiles\\lantern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\projectiles\\sayoriprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|solutionrelative:projectiles\\sayoriprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{932C13A8-917B-4025-BBA2-227A8840B8F2}|JoJosMod.csproj|c:\\users\\nacio\\onedrive\\documents\\my games\\terraria\\tmodloader\\modsources\\jojosmod\\items\\crystalstaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,22 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PhantomTax.png",
-              "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.png",
-              "RelativeDocumentMoniker": "Items\\PhantomTax.png",
-              "ToolTip": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.png",
-              "RelativeToolTip": "Items\\PhantomTax.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-06-27T17:31:14.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ShrekDiscProjectile.cs",
               "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\ShrekDiscProjectile.cs",
               "RelativeDocumentMoniker": "Projectiles\\ShrekDiscProjectile.cs",
@@ -86,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "PhantomSkull.png",
               "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\PhantomSkull.png",
               "RelativeDocumentMoniker": "Projectiles\\PhantomSkull.png",
@@ -109,7 +98,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "PhantomSkull.cs",
+              "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\PhantomSkull.cs",
+              "RelativeDocumentMoniker": "Projectiles\\PhantomSkull.cs",
+              "ToolTip": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\PhantomSkull.cs",
+              "RelativeToolTip": "Projectiles\\PhantomSkull.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwD4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T16:24:55.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PhantomTax.cs",
+              "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.cs",
+              "RelativeDocumentMoniker": "Items\\PhantomTax.cs",
+              "ToolTip": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.cs",
+              "RelativeToolTip": "Items\\PhantomTax.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAuwBIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T16:22:50.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PhantomTax.png",
+              "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.png",
+              "RelativeDocumentMoniker": "Items\\PhantomTax.png",
+              "ToolTip": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.png",
+              "RelativeToolTip": "Items\\PhantomTax.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-06-27T17:31:14.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SayoriProjectile.cs",
               "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\SayoriProjectile.cs",
               "RelativeDocumentMoniker": "Projectiles\\SayoriProjectile.cs",
@@ -117,38 +143,11 @@
               "RelativeToolTip": "Projectiles\\SayoriProjectile.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAQwCoAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T16:25:13.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T16:25:13.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PhantomSkull.cs",
-              "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\PhantomSkull.cs",
-              "RelativeDocumentMoniker": "Projectiles\\PhantomSkull.cs",
-              "ToolTip": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\PhantomSkull.cs",
-              "RelativeToolTip": "Projectiles\\PhantomSkull.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCgAAACIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T16:24:55.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PhantomTax.cs",
-              "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.cs",
-              "RelativeDocumentMoniker": "Items\\PhantomTax.cs",
-              "ToolTip": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Items\\PhantomTax.cs",
-              "RelativeToolTip": "Items\\PhantomTax.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAuwCEAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T16:22:50.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Lantern.cs",
               "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Tiles\\Lantern.cs",
               "RelativeDocumentMoniker": "Tiles\\Lantern.cs",
@@ -156,18 +155,17 @@
               "RelativeToolTip": "Tiles\\Lantern.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T18:48:08.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T18:48:08.245Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "CrystalStaffProjectile.cs",
               "DocumentMoniker": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\CrystalStaffProjectile.cs",
               "RelativeDocumentMoniker": "Projectiles\\CrystalStaffProjectile.cs",
               "ToolTip": "C:\\Users\\nacio\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\JoJosMod\\Projectiles\\CrystalStaffProjectile.cs",
               "RelativeToolTip": "Projectiles\\CrystalStaffProjectile.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAgwC8AAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-05T01:19:22.375Z",
               "EditorCaption": ""

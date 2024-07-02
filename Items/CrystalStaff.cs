@@ -17,20 +17,37 @@ namespace JoJosMod.Items
         public override void SetDefaults()
         {
             Item.height = ItemWidthHeight; Item.width = ItemWidthHeight;
-            Item.damage = 70;
+            Item.rare = ItemRarityID.Red;
+            Item.value = Item.sellPrice(gold: 10);
+            Item.damage = 65;
+
             Item.DamageType = DamageClass.Magic;
+            Item.mana = 4;
             Item.ArmorPenetration = 20;
+            Item.autoReuse = true;
+            Item.noMelee = true;
             
             Item.useAnimation = 2;
             Item.useTime = 2;
-            Item.autoReuse = true;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.noMelee = true;
             
             Item.shoot = ModContent.ProjectileType<CrystalStaffProjectile>();
             Item.shootSpeed = 35;
             
             Item.UseSound = SoundID.Item9;
+        }
+
+        public override void AddRecipes()
+        {
+            Recipe recipie = CreateRecipe();
+            recipie.AddIngredient(ItemID.ShadowbeamStaff);
+            recipie.AddIngredient(ItemID.CrystalStorm);
+            recipie.AddIngredient(ItemID.WaterBolt);
+            recipie.AddIngredient(ItemID.Prismite);
+
+            recipie.AddTile(TileID.MythrilAnvil);
+
+            recipie.Register();
         }
     }
 }
