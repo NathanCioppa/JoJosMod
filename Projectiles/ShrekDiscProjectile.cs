@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using JoJosMod.Items;
+using System;
 
 namespace JoJosMod.Projectiles
 {
@@ -24,7 +25,7 @@ namespace JoJosMod.Projectiles
         public bool isReturning = false;
         public bool shouldTurnAround = false;
         const float TurnAroundStateLengthSeconds = 0.2f;
-        float playerAttackSpeed = Main.player[Main.myPlayer].GetAttackSpeed<MeleeDamageClass>();
+        readonly float playerAttackSpeed = Main.player[Main.myPlayer].GetAttackSpeed<MeleeDamageClass>();
         int spin = 1;
         
         float? scaledDamage = null;
@@ -73,22 +74,18 @@ namespace JoJosMod.Projectiles
                 // If disc has reached the player, kill the projectile
                 if(distanceFromDestination <= Projectile.width/2) Projectile.Kill();
 
-                // baseSpeed is the same speed at which the disc traveled when it was thrown
-                float baseSpeed = (ShrekDisc.throwVelocity * playerAttackSpeed) /distanceFromDestination;
-                float speedMultiplier = 1.2f;
-                float speed = baseSpeed * speedMultiplier;
-
-                float newVelocityX = (secondsSinceStartReturning <= TurnAroundStateLengthSeconds && shouldTurnAround) 
-                    ? distanceFromDestinationX * (baseSpeed * ( (1f / TurnAroundStateLengthSeconds) * secondsSinceStartReturning )) 
-                    : distanceFromDestinationX * speed;
-
-                Vector2 velocity = new(newVelocityX, distanceFromDestinationY * speed);
-
-                Projectile.velocity =  velocity;
-                
                 scaledDamage *= 1.01f;
                 Projectile.damage = (int)scaledDamage;
                 
+                float baseSpeed = (ShrekDisc.throwVelocity * playerAttackSpeed);
+                float speedMultiplier = 1.2f;
+                float speed = baseSpeed * speedMultiplier;
+
+                Projectile.velocity = Vector2.Lerp(
+                    Projectile.velocity,
+                    Projectile.DirectionTo(player.Center) * speed,
+                    0.2f
+                );
             }
         }
 
@@ -123,6 +120,8 @@ namespace JoJosMod.Projectiles
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Projectile.penetrate++;
+            if(!isReturning) Projectile.velocity *= -1;
+
             isReturning = true;
         }
 
